@@ -2,9 +2,11 @@
 
 import sys
 
+
 def lcs3(a, b, c):
     #write your code here
     return min(len(a), len(b), len(c))
+
 
 if __name__ == '__main__':
     input = sys.stdin.read()

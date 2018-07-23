@@ -17,13 +17,19 @@ def optimal_sequence(n):
 
 
 def opt_sequence(n):
-    seq = {1: [1], 2: [1, 2], 3: [1, 3]}
+    seq = {
+        1: [1],
+        2: [1, 2],
+        3: [1, 3]
+    }
 
     for i in range(4, n + 1):
         s1 = seq[i-1]
-        s2 = s3 = None
+        s2 = None
+        s3 = None
+
         if i % 2 == 0:
-            s2 = seq[i//2]
+            s2 = seq[i // 2]
         if i % 3 == 0:
             s3 = seq[i // 3]
 
@@ -74,10 +80,10 @@ def stress_test():
         print("--------------------")
 
 
-# for i in range(1, 10):
+# for i in range(1, 20):
 #     print(i)
 #     print(opt_sequence(i))
-#
+
 # stress_test()
 
 input = sys.stdin.read()
