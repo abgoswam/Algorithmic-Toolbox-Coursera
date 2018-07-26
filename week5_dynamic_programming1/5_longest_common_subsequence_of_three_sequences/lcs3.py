@@ -18,6 +18,10 @@ def lcs3(a, b, c):
                 v = [
                     lcs[i, j, k-1],
                     lcs[i, j-1, k],
+                    lcs[i, j-1, k-1],
+                    lcs[i-1, j, k-1],
+                    lcs[i-1, j-1, k],
+                    lcs[i-1, j, k],
                 ]
 
                 if a[i-1] == b[j-1] and b[j-1] == c[k-1]:
@@ -27,9 +31,7 @@ def lcs3(a, b, c):
 
                 lcs[i, j, k] = max(v)
 
-    return lcs[n, m]
-
-    return min(len(a), len(b), len(c))
+    return lcs[n, m, l]
 
 
 if __name__ == '__main__':
