@@ -11,7 +11,9 @@ def partition3(A):
         if sums[0] == sums[1] and sums[1] == sums[2]:
             return 1
 
+    print(A)
     return 0
+
 
 if __name__ == '__main__':
     input = sys.stdin.read()
